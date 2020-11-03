@@ -1,6 +1,23 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
+  .grid{
+    padding-left: calc(5% + 1rem);
+    padding-right: calc(5% + 1rem);
+  }
+  .content{
+    padding-left: calc(8% + 1rem);
+    padding-right: calc(8% + 1rem);
+  }
+  .section {
+    padding-top: 1.875rem;
+    padding-bottom: 1.875rem;
+  }
+  .section-xl{
+    padding-top: 4.875rem;
+    padding-bottom: 4.875rem;
+  }
+
   html,
   body {
   padding: 0;

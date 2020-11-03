@@ -38,7 +38,7 @@ export default function Projects() {
   ];
 
   return (
-    <Container>
+    <Container className={"grid"}>
       <Content>
         <Box>
           <Title>Recent Projects</Title>
@@ -62,15 +62,18 @@ export default function Projects() {
                 </h3>
                 <p>{project.shorDescription}</p>
               </div>
-              <Image src={project.image} width={350} height={350} />
+              <Image src={project.image} width={650} height={650} />
             </Box>
           );
         })}
-        <Box>
-          <Link href="/">
-            <a className={"button-seeMore"}>See More</a>
-          </Link>
-        </Box>
+
+        {projects.length > 4 && (
+          <Box>
+            <Link href="/">
+              <a className={"button-seeMore"}>More Projects</a>
+            </Link>
+          </Box>
+        )}
       </Content>
     </Container>
   );
