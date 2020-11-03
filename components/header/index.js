@@ -21,7 +21,7 @@ export default function Header() {
     <>
       {isMenuOpen && (
         <MobileNavegation onClick={() => setIsMenuOpen(false)}>
-         <button><FaTimes size={25} fill={themeConfig.colors.orange}/></button>
+         <button onClick={() => setIsMenuOpen(false)}><FaTimes size={25} fill={themeConfig.colors.orange}/></button>
           <ul>
             <li><Link href={"/"}><a>Home</a></Link></li>
             <li><Link href={"/about"}><a>About Us</a></Link></li>

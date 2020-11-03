@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Header from "../components/header";
+import Projects from '../components/projects'
 import { GlobalStyles } from "../styles/global";
 import { ThemeProvider } from 'styled-components'
 import { themeConfig } from '../styles/theme'
@@ -18,6 +19,7 @@ export default function Home() {
       </Head>
       <main>
         <Header/>
+        <Projects />
       </main>
     </ThemeProvider>
   );
