@@ -1,4 +1,3 @@
 [build]
-  command   = "next build"
-  functions = "out_functions"
+  command   = "yarn build && yarn export"
   publish   = "out_publish"
