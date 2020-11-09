@@ -1,18 +1,14 @@
-import { Context } from "../context";
-import { useState } from "react";
-
 import Head from "next/head";
 import Header from "../components/header";
 import Projects from "../components/projects";
 import Services from "../components/services";
+import Footer from '../components/footer'
 import { GlobalStyles } from "../styles/global";
 import { ThemeProvider } from "styled-components";
 import { themeConfig } from "../styles/theme";
 
 export default function Home() {
-  const [isModalOpen, setIsModalOpen] = useState(true);
   return (
-    <Context.Provider value={{ isModalOpen, setIsModalOpen }}>
       <ThemeProvider theme={themeConfig}>
         <GlobalStyles />
         <Head>
@@ -27,8 +23,8 @@ export default function Home() {
           <Header />
           <Projects />
           <Services />
+          <Footer />
         </main>
       </ThemeProvider>
-    </Context.Provider>
   );
 }

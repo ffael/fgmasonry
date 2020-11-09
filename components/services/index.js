@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import {
   Container,
   Content,
@@ -19,7 +17,6 @@ import {
   FaSquareFull,
 } from "react-icons/fa";
 import { themeConfig } from "../../styles/theme";
-import Modal from '../modal'
 
 export default function Services() {
   const services = [
@@ -60,115 +57,92 @@ export default function Services() {
         "Curabitur blandit tempus porttitor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas sed diam eget risus varius blandit sit amet non magna.",
     },
   ];
-  const [isModalOpen, setIsModalOpen] = useState(true) 
-  const [serviceType, setServiceType] = useState('general')
-
-  function openModal(serviceSlug){
-    setIsModalOpen(true)
-    setServiceType(serviceSlug)
-  }
 
   return (
     <>
-    {isModalOpen && <Modal closeModal={setIsModalOpen} serviceType={serviceType}/>}
-    <Container className={"grid"}>
-      <Content>
-        <header>
-          <Title>Services</Title>
-          <Description>
-            Donec id elit non mi porta gravida at eget metus. Cras justo odio,
-            dapibus ac facilisis in, egestas eget quam. Maecenas sed diam eget
-            risus varius blandit sit amet non magna.
-          </Description>
-        </header>
-        <List>
-          <Carousel
-            className={"carousel-xl"}
-            framePadding={"0 50px"}
-            slidesToShow={3}
-            autoplay={false}
-            wrapAround
-            dragging={false}
-            renderBottomCenterControls={null}
-            renderCenterLeftControls={({ previousSlide }) => (
-              <button className={"controlButton"} onClick={previousSlide}>
-                <FaAngleLeft size={30} fill={themeConfig.colors.black} />
-              </button>
-            )}
-            renderCenterRightControls={({ nextSlide }) => (
-              <button className={"controlButton"} onClick={nextSlide}>
-                <FaAngleRight size={30} fill={themeConfig.colors.black} />
-              </button>
-            )}
-          >
-            {services.map((service, key) => {
-              return (
-                <Box key={key}>
-                  <h4>
-                    <FaSquareFull size={8} fill={themeConfig.colors.orange} />{" "}
-                    {service.title}
-                  </h4>
-                  <p>{service.description}</p>
-                  <RequestButton className={"button-requestService"}
-                  onClick={() => openModal(service.slug)
-                  }>
-                    <FaClipboardCheck
-                      size={20}
-                      fill={themeConfig.colors.orange}
-                    />
-                    Request Service
-                  </RequestButton>
-                </Box>
-              );
-            })}
-          </Carousel>
-          <Carousel
-            className={"carousel-xs"}
-            framePadding={"50px 0"}
-            slidesToShow={1}
-            autoplay={false}
-            wrapAround
-            vertical
-            dragging={false}
-            renderBottomCenterControls={null}
-            renderCenterLeftControls={null}
-            renderCenterRightControls={null}
-            renderTopCenterControls={({ previousSlide }) => (
-              <button className={"controlButton"} onClick={previousSlide}>
-                <FaAngleUp size={30} fill={themeConfig.colors.black} />
-              </button>
-            )}
-            renderBottomCenterControls={({ nextSlide }) => (
-              <button className={"controlButton"} onClick={nextSlide}>
-                <FaAngleDown size={30} fill={themeConfig.colors.black} />
-              </button>
-            )}
-          >
-            {services.map((service, key) => {
-              return (
-                <Box key={key}>
-                  <h4>
-                    <FaSquareFull size={8} fill={themeConfig.colors.orange} />{" "}
-                    {service.title}
-                  </h4>
-                  <p>{service.description}</p>
-                  <RequestButton
-                    className={"button-requestService"}
-                    onClick={() => console.log('fgffh')}
-                  >
-                    <FaClipboardCheck
-                      size={20}
-                      fill={themeConfig.colors.orange}
-                    />
-                    Request Service
-                  </RequestButton>
-                </Box>
-              );
-            })}
-          </Carousel>
-        </List>
-      </Content>
-    </Container>
+      <Container className={"grid"}>
+        <Content>
+          <header>
+            <Title>Services</Title>
+            <Description>
+              Donec id elit non mi porta gravida at eget metus. Cras justo odio,
+              dapibus ac facilisis in, egestas eget quam. Maecenas sed diam eget
+              risus varius blandit sit amet non magna.
+            </Description>
+          </header>
+          <List>
+            <Carousel
+              className={"carousel carousel-xl"}
+              framePadding={"0 50px"}
+              slidesToShow={3}
+              autoplay={true}
+              wrapAround
+              dragging
+              renderBottomCenterControls={null}
+              renderCenterLeftControls={({ previousSlide }) => (
+                <button className={"controlButton"} onClick={previousSlide}>
+                  <FaAngleLeft size={30} fill={themeConfig.colors.black} />
+                </button>
+              )}
+              renderCenterRightControls={({ nextSlide }) => (
+                <button className={"controlButton"} onClick={nextSlide}>
+                  <FaAngleRight size={30} fill={themeConfig.colors.black} />
+                </button>
+              )}
+            >
+              {services.map((service, key) => {
+                return (
+                  <Box key={key}>
+                    <h4>
+                      <FaSquareFull size={8} fill={themeConfig.colors.orange} />{" "}
+                      {service.title}
+                    </h4>
+                    <p>{service.description}</p>
+                  </Box>
+                );
+              })}
+            </Carousel>
+            <Carousel
+              className={"carousel carousel-xs"}
+              framePadding={"50px 0"}
+              slidesToShow={1}
+              autoplay={true}
+              wrapAround
+              vertical
+              dragging
+              renderBottomCenterControls={null}
+              renderCenterLeftControls={null}
+              renderCenterRightControls={null}
+              renderTopCenterControls={({ previousSlide }) => (
+                <button className={"controlButton"} onClick={previousSlide}>
+                  <FaAngleUp size={30} fill={themeConfig.colors.black} />
+                </button>
+              )}
+              renderBottomCenterControls={({ nextSlide }) => (
+                <button className={"controlButton"} onClick={nextSlide}>
+                  <FaAngleDown size={30} fill={themeConfig.colors.black} />
+                </button>
+              )}
+            >
+              {services.map((service, key) => {
+                return (
+                  <Box key={key}>
+                    <h4>
+                      <FaSquareFull size={8} fill={themeConfig.colors.orange} />{" "}
+                      {service.title}
+                    </h4>
+                    <p>{service.description}</p>
+                  </Box>
+                );
+              })}
+            </Carousel>
+          </List>
+          <RequestButton className={"button-requestService"} onClick={() => console.log("Ok")}>
+            <FaClipboardCheck size={20} fill={themeConfig.colors.orange} />
+            Request Service
+          </RequestButton>
+        </Content>
+      </Container>
     </>
   );
 }

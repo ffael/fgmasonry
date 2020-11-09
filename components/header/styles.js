@@ -102,7 +102,7 @@ export const HeroContainer = styled.div`
   @media (min-width: 700px) {
     h1 {
       font-size: 4.687rem;
-      margin: 0;
+      margin: 0 0 30px 0;
     }
     p {
       font-size: 1.5625rem;

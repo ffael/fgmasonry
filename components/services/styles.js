@@ -23,6 +23,10 @@ export const Content = styled.section`
     margin-bottom: 50px;
   }
 
+  .carousel{
+    margin-bottom: 40px;
+  }
+
   .controlButton {
     svg:hover {
       fill: ${(props) => props.theme.colors.orange};
@@ -69,6 +73,7 @@ export const Box = styled.div`
   width: 95% !important;
   padding: 20px;
   transition: all 0.3s ease;
+  user-select: none;
 
   &:hover {
     background: ${(props) => props.theme.colors.darkBeige};
@@ -113,10 +118,11 @@ export const RequestButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+  align-self: center;
   background: ${(props) => props.theme.colors.black} !important;
   padding: 15px;
   color: #fff;
-  width: 100%;
+  width: 200px;
   border-radius: 5px;
 
   svg {

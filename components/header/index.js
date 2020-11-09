@@ -15,7 +15,7 @@ import {
 } from "./styles";
 import { themeConfig } from "../../styles/theme";
 
-export default function Header() {
+export default function Header({title='Focused on Quality', slogan='Morbi leo risus, porta ac consectetur ac, vestibulum at eros.'}) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <>
@@ -72,11 +72,9 @@ export default function Header() {
           <Button type="button">Get a Free Estimate</Button>
         </Content>
         <HeroContainer>
-          <h1>Focused on Quality</h1>
+          <h1>{title}</h1>
           <p>
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
-            eget lacinia odio sem nec elit. Cras mattis consectetur purus sit
-            amet fermentum.
+            {slogan}
           </p>
         </HeroContainer>
         <Filter />
