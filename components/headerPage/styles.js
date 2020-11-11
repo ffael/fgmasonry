@@ -4,8 +4,7 @@ export const Container = styled.header`
   display: flex;
   align-items: top;
   flex-direction: column;
-  background: url("/images/background.jpg") no-repeat;
-  background-size: 100% 100%;
+  background: ${props => props.theme.colors.black};
   position: relative;
   height: 100vh;
 

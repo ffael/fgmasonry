@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Image from "next/image";
+import { Navegation, MobileNavegation } from "../navegation";
 import { FaBuffer } from "react-icons/fa";
-import { MobileNavegation, Navegation } from '../navegation'
 import {
   Container,
   HeroContainer,
@@ -12,9 +12,11 @@ import {
   MenuButton,
 } from "./styles";
 
-export default function Header({title='Focused on Quality', slogan='Morbi leo risus, porta ac consectetur ac, vestibulum at eros.'}) {
+export default function Header({
+  title = "Focused on Quality",
+  slogan = "Morbi leo risus, porta ac consectetur ac, vestibulum at eros.",
+}) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   return (
     <>
       {isMenuOpen && (
@@ -36,9 +38,7 @@ export default function Header({title='Focused on Quality', slogan='Morbi leo ri
         </Content>
         <HeroContainer>
           <h1>{title}</h1>
-          <p>
-            {slogan}
-          </p>
+          <p>{slogan}</p>
         </HeroContainer>
         <Filter />
       </Container>
