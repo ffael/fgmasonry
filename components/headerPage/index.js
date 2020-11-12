@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { Context } from "../../context";
 import Image from "next/image";
 import { Navegation, MobileNavegation } from "../navegation";
 import { FaBuffer } from "react-icons/fa";
@@ -12,11 +13,9 @@ import {
   MenuButton,
 } from "./styles";
 
-export default function Header({
-  title = "Focused on Quality",
-  slogan = "Morbi leo risus, porta ac consectetur ac, vestibulum at eros.",
-}) {
+export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const ctx = useContext(Context);
   return (
     <>
       {isMenuOpen && (
@@ -37,8 +36,7 @@ export default function Header({
           <Button type="button">Get a Free Estimate</Button>
         </Content>
         <HeroContainer>
-          <h1>{title}</h1>
-          <p>{slogan}</p>
+          <h1>{ctx.title}</h1>
         </HeroContainer>
         <Filter />
       </Container>

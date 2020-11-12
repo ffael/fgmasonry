@@ -1,5 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
-import { ServerStyleSheet } from 'styled-components'
+import { ServerStyleSheet } from "styled-components";
 
 export default class CustomDocument extends Document {
   static async getInitialProps(ctx) {
@@ -24,6 +24,11 @@ export default class CustomDocument extends Document {
       <Html lang="en">
         <Head>
           <link rel="shortcut icon" type="image/x-icon" />
+          <link rel="icon" href="/favicon.ico" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Oswald:wght@400;700&display=swap"
+            rel="stylesheet"
+          />
 
           {/* We only want to add the scripts if in production */}
           {isProduction && (

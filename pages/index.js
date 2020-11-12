@@ -1,30 +1,23 @@
 import Head from "next/head";
-import Header from "../components/header";
-import Projects from "../components/projects";
-import Services from "../components/services";
-import Footer from '../components/footer'
 import { GlobalStyles } from "../styles/global";
 import { ThemeProvider } from "styled-components";
 import { themeConfig } from "../styles/theme";
+import Header from "../components/header";
+import Footer from "../components/footer";
+import Projects from "../components/projects";
+import Services from "../components/services";
 
 export default function Home() {
   return (
-      <ThemeProvider theme={themeConfig}>
-        <GlobalStyles />
-        <Head>
-          <title>FG Masonry - Home</title>
-          <link rel="icon" href="/favicon.ico" />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Oswald:wght@400;700&display=swap"
-            rel="stylesheet"
-          />
-        </Head>
-        <main>
-          <Header />
-          <Projects />
-          <Services />
-          <Footer />
-        </main>
-      </ThemeProvider>
+    <ThemeProvider theme={themeConfig}>
+      <GlobalStyles />
+      <Head>
+        <title>FG Masonry - Home</title>
+      </Head>
+      <Header />
+      <Projects />
+      <Services />
+      <Footer />
+    </ThemeProvider>
   );
 }

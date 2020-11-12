@@ -4,11 +4,15 @@ export const Container = styled.header`
   display: flex;
   align-items: top;
   flex-direction: column;
-  background: ${props => props.theme.colors.black};
+  background: url('/images/bg-page.jpeg') no-repeat 0 0;
+  background-size: cover;
   position: relative;
-  height: 100vh;
+  height: 60vh;
+  border-bottom: 10px solid ${props=> props.theme.colors.orange};
 
   @media (min-width: 700px) {
+    height: 50vh;
+    border-bottom: none;
   }
 `;
 
@@ -20,7 +24,6 @@ export const MenuButton = styled.button`
   color: #fff;
   display: flex;
   align-items: center;
-  margin: 30px 0 40px 0;
 
   span {
     display: inline-block;
@@ -42,12 +45,10 @@ export const HeroContainer = styled.div`
   position: relative;
   z-index: 2;
   margin: auto 0;
-  text-align: center;
 
   h1 {
-    margin: 50px 0 0 0;
     line-height: 4rem;
-    font-size: 3.125rem;
+    font-size: 4.125rem;
     color: ${(props) => props.theme.colors.orange};
   }
 
@@ -86,7 +87,7 @@ export const Filter = styled.div`
   z-index: 1;
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2));
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
   @media (min-width: 700px) {
   }
 `;
@@ -109,20 +110,20 @@ export const Content = styled.div`
 `;
 
 export const Button = styled.button`
-  background: ${(props) => props.theme.colors.orange};
-  color: #fff;
-  font-size: 0.975rem;
-  font-family: Oswald;
-  border: 0;
-  outline: none;
-  padding: 10px 35px;
-  border-radius: 5px;
-  &:hover {
-    background: ${(props) => props.theme.colors.black};
-    cursor: pointer;
-  }
-
+  display: none;
   @media (min-width: 700px) {
-    margin: 0;
+    display: block;
+    background: ${(props) => props.theme.colors.orange};
+    color: #fff;
+    font-size: 0.975rem;
+    font-family: Oswald;
+    border: 0;
+    outline: none;
+    padding: 10px 35px;
+    border-radius: 5px;
+    &:hover {
+      background: ${(props) => props.theme.colors.black};
+      cursor: pointer;
+    }
   }
 `;

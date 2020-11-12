@@ -1,6 +1,11 @@
 import { createGlobalStyle } from "styled-components";
+import { themeConfig } from "./theme";
 
 export const GlobalStyles = createGlobalStyle`
+  .link-active{
+    color: ${themeConfig.colors.orange} !important;
+  }
+
   .grid{
     padding-left: calc(5% + 1rem);
     padding-right: calc(5% + 1rem);
@@ -16,6 +21,10 @@ export const GlobalStyles = createGlobalStyle`
   .section-xl{
     padding-top: 4.875rem;
     padding-bottom: 4.875rem;
+  }
+
+  ::selection{
+    background: ${props => props.theme.colors.darkBeige};
   }
 
   html,
