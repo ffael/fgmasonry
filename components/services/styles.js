@@ -14,9 +14,23 @@ export const Container = styled.section`
 `;
 
 export const Content = styled.section`
-  padding: 100px 0;
   display: flex;
   flex-direction: column;
+
+  h3 {
+    font-size: 2rem;
+    line-height: 35px;
+    color: ${(props) => props.theme.colors.orange};
+  }
+  p {
+    font-size: 0.875rem;
+    line-height: 30px;
+    font-weight: 300;
+  }
+  article {
+    width: 100%;
+    order: 1;
+  }
 
   header {
     width: 100%;
@@ -34,10 +48,8 @@ export const Content = styled.section`
     }
   }
 
-  @media (min-width: 900px) {
-    header {
-      width: 80%;
-    }
+  @media (min-width: 980px) {
+    width: 100%;
   }
   @media (min-width: 1200px) {
     header {
@@ -74,6 +86,7 @@ export const Box = styled.div`
   padding: 20px;
   transition: all 0.3s ease;
   user-select: none;
+  background: ${props=> props.dark && props.theme.colors.darkBeige};
 
   &:hover {
     background: ${(props) => props.theme.colors.darkBeige};
@@ -113,7 +126,19 @@ export const List = styled.div`
   }
 `;
 
-export const RequestButton = styled.button`
+export const ServiceList = styled.div`
+  margin-top: 40px;
+  div{
+    margin-bottom: 50px;  
+  }
+  @media(min-width: 700px){
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 5%;
+  }
+`
+
+export const RequestButton = styled.a`
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -121,6 +146,7 @@ export const RequestButton = styled.button`
   align-self: center;
   background: ${(props) => props.theme.colors.black} !important;
   padding: 15px;
+  font-size: 0.8125rem;
   color: #fff;
   width: 200px;
   border-radius: 5px;

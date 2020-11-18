@@ -4,7 +4,9 @@ export const Container = styled.header`
   display: flex;
   align-items: top;
   flex-direction: column;
-  background: url('/images/bg-page.jpeg') no-repeat 0 0;
+  background: ${props => props.image ? `url(${props.image})` : `url('/images/bg-page.jpeg')`};
+  background-repeat: no-repeat;
+  background-position: 0 0;
   background-size: cover;
   position: relative;
   height: 60vh;
@@ -109,7 +111,7 @@ export const Content = styled.div`
   }
 `;
 
-export const Button = styled.button`
+export const Button = styled.a`
   display: none;
   @media (min-width: 700px) {
     display: block;
@@ -121,6 +123,7 @@ export const Button = styled.button`
     outline: none;
     padding: 10px 35px;
     border-radius: 5px;
+    transition: all 0.3s ease;
     &:hover {
       background: ${(props) => props.theme.colors.black};
       cursor: pointer;

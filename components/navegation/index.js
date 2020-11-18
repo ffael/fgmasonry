@@ -22,21 +22,21 @@ export function Navegation() {
           </Link>
         </li>
         <li>
-          <Link href={"#"}>
+          <Link href={"/projects"}>
             <a className={`${router.route === "/projects" ? 'link-active' : ''}`}>
               Projects
             </a>
           </Link>
         </li>
         <li>
-          <Link href={"#"}>
+          <Link href={"/services"}>
             <a className={`${router.route === "/services" ? 'link-active' : ''}`}>
               Services
             </a>
           </Link>
         </li>
         <li>
-          <Link href={"#"}>
+          <Link href={"/contact"}>
             <a className={`${router.route === "/contact" ? 'link-active' : ''}`}>
               Contact
             </a>
@@ -80,7 +80,7 @@ export function MobileNavegation({ handleVisible }) {
           </Link>
         </li>
         <li>
-          <Button type="button">Get a Free Estimate</Button>
+          <Button href="/estimate">Get a Free Estimate</Button>
         </li>
       </ul>
     </MobileNav>

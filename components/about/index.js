@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from "next/image";
 import { Container, Content } from "./styles";
 
 export default function About() {
@@ -6,7 +6,9 @@ export default function About() {
     <Container className="grid section-xl">
       <Content>
         <article>
-          <h3>Improving quality of life with an integrated unified approach.</h3>
+          <h3>
+            Improving quality of life with an integrated unified approach.
+          </h3>
           <p>
             Sed posuere consectetur est at lobortis. Cum sociis natoque
             penatibus et magnis dis parturient montes, nascetur ridiculus mus.
@@ -23,7 +25,13 @@ export default function About() {
           </p>
         </article>
         <picture>
-          <Image src={'/images/4.jpeg'} width={400} height={400} />
+          <Image
+            loading={`lazy`}
+            src={"/images/4.jpeg"}
+            width={400}
+            height={400}
+            layout='intrinsic'
+          />
         </picture>
       </Content>
     </Container>

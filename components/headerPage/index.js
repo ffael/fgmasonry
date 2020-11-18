@@ -1,6 +1,7 @@
 import { useState, useContext } from "react";
-import { Context } from "../../context";
+import Link from "next/link";
 import Image from "next/image";
+import { Context } from "../../context";
 import { Navegation, MobileNavegation } from "../navegation";
 import { FaBuffer } from "react-icons/fa";
 import {
@@ -24,16 +25,20 @@ export default function Header() {
           handleVisible={setIsMenuOpen}
         />
       )}
-      <Container>
+      <Container image={ctx.image}>
         <Content>
           <Logo>
-            <Image src={"/images/logo.png"} width={175} height={150} />
+            <Link href="/">
+              <a>
+                <Image src={"/images/logo.png"} width={175} height={150} />
+              </a>
+            </Link>
           </Logo>
           <Navegation />
           <MenuButton onClick={() => setIsMenuOpen(true)}>
             <FaBuffer size={30} color={"#fff"} /> <span>Menu</span>
           </MenuButton>
-          <Button type="button">Get a Free Estimate</Button>
+          <Button href="/estimate">Get a Free Estimate</Button>
         </Content>
         <HeroContainer>
           <h1>{ctx.title}</h1>

@@ -1,3 +1,5 @@
+import serviceData from "../../data/services.json";
+
 import { Container, Content, Copyright } from "./styles";
 import {
   FaYelp,
@@ -28,43 +30,42 @@ export default function Footer() {
             <nav className={"nav-services"}>
               <h4>Services</h4>
               <ul>
-                <li>
-                  <a href="#">Walkways</a>
-                </li>
-                <li>
-                  <a href="#">Retaining Walls</a>
-                </li>
-                <li>
-                  <a href="#">Patios &amp; Paver</a>
-                </li>
-                <li>
-                  <a href="#">Excavation</a>
-                </li>
-                <li>
-                  <a href="#">Stairs</a>
-                </li>
-                <li>
-                  <a href="#">Driveways</a>
-                </li>
+                {serviceData.map((service, key) => {
+                  return (
+                    <li key={key}>
+                      <a href={'/services'}>{service.title}</a>
+                    </li>
+                  );
+                })}
               </ul>
             </nav>
             <nav className={"nav-social"}>
               <h4>Social</h4>
               <ul>
                 <li>
-                  <a href="#"><FaYelp size={25}/></a>
+                  <a href="#">
+                    <FaYelp size={25} />
+                  </a>
                 </li>
                 <li>
-                  <a href="#"><FaWhatsapp size={25} /></a>
+                  <a href="#">
+                    <FaWhatsapp size={25} />
+                  </a>
                 </li>
                 <li>
-                  <a href="#"><FaFacebookMessenger size={25} /></a>
+                  <a href="#">
+                    <FaFacebookMessenger size={25} />
+                  </a>
                 </li>
                 <li>
-                  <a href="#"><FaInstagram size={25} /></a>
+                  <a href="#">
+                    <FaInstagram size={25} />
+                  </a>
                 </li>
                 <li>
-                  <a href="#"><FaFacebookF size={25} /></a>
+                  <a href="#">
+                    <FaFacebookF size={25} />
+                  </a>
                 </li>
               </ul>
             </nav>

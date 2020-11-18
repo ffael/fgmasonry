@@ -64,15 +64,16 @@ export const MobileNav = styled.nav`
   }
 `;
 
-export const Button = styled.button`
+export const Button = styled.a`
   background: ${(props) => props.theme.colors.orange};
-  color: #fff;
+  color: #fff !important;
   font-size: 0.975rem;
   font-family: Oswald;
   border: 0;
   outline: none;
   padding: 10px 35px;
   border-radius: 5px;
+  transition: all 0.3s ease;
   &:hover {
     background: ${(props) => props.theme.colors.black};
     cursor: pointer;

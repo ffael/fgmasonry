@@ -1,3 +1,5 @@
+import serviceData from "../../data/services.json";
+
 import {
   Container,
   Content,
@@ -5,6 +7,7 @@ import {
   Description,
   Box,
   List,
+  ServiceList,
   RequestButton,
 } from "./styles";
 import Carousel from "nuka-carousel";
@@ -18,49 +21,58 @@ import {
 } from "react-icons/fa";
 import { themeConfig } from "../../styles/theme";
 
-export default function Services() {
-  const services = [
-    {
-      title: "Stairs",
-      slug: "stairs",
-      description:
-        "Curabitur blandit tempus porttitor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas sed diam eget risus varius blandit sit amet non magna.",
-    },
-    {
-      title: "Retaining Wall",
-      slug: "retaining-wall",
-      description:
-        "Curabitur blandit tempus porttitor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas sed diam eget risus varius blandit sit amet non magna.",
-    },
-    {
-      title: "Pavers",
-      slug: "pavers",
-      description:
-        "Curabitur blandit tempus porttitor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas sed diam eget risus varius blandit sit amet non magna.",
-    },
-    {
-      title: "Driveway",
-      slug: "driveway",
-      description:
-        "Curabitur blandit tempus porttitor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas sed diam eget risus varius blandit sit amet non magna.",
-    },
-    {
-      title: "Walkways",
-      slug: "walkways",
-      description:
-        "Curabitur blandit tempus porttitor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas sed diam eget risus varius blandit sit amet non magna.",
-    },
-    {
-      title: "Excavation",
-      slug: "excavation",
-      description:
-        "Curabitur blandit tempus porttitor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas sed diam eget risus varius blandit sit amet non magna.",
-    },
-  ];
-
+export function ServiceContent() {
   return (
     <>
-      <Container className={"grid"}>
+      <Container className={"grid section-xl"}>
+        <Content>
+          <article>
+            <h3>
+              Improving quality of life with an integrated unified approach.
+            </h3>
+            <p>
+              Sed posuere consectetur est at lobortis. Cum sociis natoque
+              penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+              Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel
+              augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id
+              nibh ultricies vehicula ut id elit.
+            </p>
+          </article>
+          <article>
+            <ServiceList>
+              {serviceData.map((service, key) => {
+                return (
+                  <Box key={key} dark>
+                    <h4>
+                      <FaSquareFull size={8} fill={themeConfig.colors.orange} />{" "}
+                      {service.title}
+                    </h4>
+                    <p>{service.description}</p>
+                    <RequestButton
+                      className={"button-requestService"}
+                      href={`/estimate?type=${service.slug}`}
+                    >
+                      <FaClipboardCheck
+                        size={20}
+                        fill={themeConfig.colors.orange}
+                      />
+                      Request Service
+                    </RequestButton>
+                  </Box>
+                );
+              })}
+            </ServiceList>
+          </article>
+        </Content>
+      </Container>
+    </>
+  );
+}
+
+export default function Services() {
+  return (
+    <>
+      <Container className={"grid section-xl"}>
         <Content>
           <header>
             <Title>Services</Title>
@@ -90,7 +102,7 @@ export default function Services() {
                 </button>
               )}
             >
-              {services.map((service, key) => {
+              {serviceData.map((service, key) => {
                 return (
                   <Box key={key}>
                     <h4>
@@ -124,7 +136,7 @@ export default function Services() {
                 </button>
               )}
             >
-              {services.map((service, key) => {
+              {serviceData.map((service, key) => {
                 return (
                   <Box key={key}>
                     <h4>
@@ -137,7 +149,7 @@ export default function Services() {
               })}
             </Carousel>
           </List>
-          <RequestButton className={"button-requestService"} onClick={() => console.log("Ok")}>
+          <RequestButton className={"button-requestService"} href={"/estimate"}>
             <FaClipboardCheck size={20} fill={themeConfig.colors.orange} />
             Request Service
           </RequestButton>

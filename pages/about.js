@@ -5,7 +5,7 @@ import { Context } from '../context'
 
 export default function AboutPage() {
   return (
-    <Context.Provider value={{title:"About Us"}}>
+    <Context.Provider value={{title:"About Us", image: '/images/3.jpeg'}}>
      <Head>
         <title>FG Masonry - About</title>
       </Head>

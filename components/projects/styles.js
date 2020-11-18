@@ -4,21 +4,37 @@ export const Container = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 50px 0;
+  background: ${(props) => props.contentPage && props.theme.colors.lightBeige};
 `;
 
 export const Content = styled.section`
-  padding: 50px 0;
   display: grid;
+  width: 100%;
   grid-template-columns: minmax(350px, 500px);
 
   @media (min-width: 700px) and (max-width: 949px) {
     grid-template-columns: repeat(2, minmax(100px, 500px));
+    grid-gap: 50px;
   }
 
   @media (min-width: 950px) {
-    grid-template-columns: repeat(4, minmax(100px, 300px));
-    grid-template-rows: repeat(2, 300px);
+    width: 100%;
+    grid-template-columns: ${(props) =>
+      !props.contentPage
+        ? "repeat(4, minmax(100px, 1fr))"
+        : "repeat(2, minmax(400px, 100%))"};
+    grid-template-rows: ${(props) =>
+      !props.contentPage
+        ? "repeat(2, minmax(300px, 1fr))"
+        : "minmax(400px, 100%)"};
+    grid-auto-flow: row;
+
+    grid-gap: ${(props) => props.contentPage && "50px"};
+  }
+
+  @media (min-width: 1450px) {
+    grid-template-columns: ${(props) =>
+      !props.contentPage ? "" : "repeat(3, minmax(400px, 100%))"};
   }
 `;
 
@@ -79,9 +95,6 @@ export const Box = styled.div`
     padding: 0 20px;
     text-align: center;
     border-radius: 5px;
-    p {
-      display: none;
-    }
   }
 
   @media (min-width: 700px) {
@@ -94,37 +107,18 @@ export const Box = styled.div`
       opacity: 1;
     }
     .projectInfo {
-      position: absolute;
-      z-index: 1;
-      background: ${(props) => props.theme.colors.orange};
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      transition: all 0.3s ease;
-      color: #fff;
-      padding: 0 20px;
-      text-align: center;
-      border-radius: 0;
-      h3 {
-        margin-bottom: 0;
-      }
-      p {
-        display: block;
-      }
+      border-radius: 0 5px 5px 0;
     }
     &:first-child {
-      grid-column-start: 1;
-      grid-column-end: 3;
+      ${(props) =>
+        !props.contentPage
+          ? "grid-column-start: 1; grid-column-end: 3; padding: 0 20px;"
+          : ""};
       background: none;
-      padding: 0 20px;
     }
     &:last-child {
       background: none;
-      align-items: center;
+      align-items: ${(props) => (!props.contentPage ? "center" : "none")};
     }
   }
 `;

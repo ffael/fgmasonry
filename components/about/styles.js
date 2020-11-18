@@ -15,7 +15,7 @@ export const Content = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 5% 0;
+  padding: 0 5%;
 
   h3 {
     font-size: 2rem;
@@ -28,12 +28,11 @@ export const Content = styled.section`
     font-weight: 300;
   }
   article {
-    flex: 1;
     order: 1;
   }
   picture {
     margin-bottom: 50px;
-    flex: 1;
+    display: none;
     img {
       box-shadow: none;
     }
