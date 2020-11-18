@@ -69,7 +69,7 @@ export function ServiceContent() {
   );
 }
 
-export default function Services() {
+export function Services() {
   return (
     <>
       <Container className={"grid section-xl"}>

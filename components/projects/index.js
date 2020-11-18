@@ -31,7 +31,7 @@ export function ProjectContent() {
   );
 }
 
-export default function Projects() {
+export function Projects() {
   return (
     <Container className={"grid section-xl"}>
       <Content>
