@@ -1,7 +1,7 @@
 [
   {
-    "title": "Malden",
-    "tags": ["retaining-wall", "addition"],
+    "title": "Nashua, NH",
+    "tags": ["stairs", "patio", "firepit", "retaining wall"],
     "slug": "project-1",
     "featured": true,
     "description": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper.",
@@ -24,8 +24,15 @@
     ]
   },
   {
-    "title": "Nashua",
-    "tags": ["retaining-wall", "addition"],
+    "title": "Malden, MA",
+    "tags": [
+      "driveway",
+      "excavation",
+      "paver",
+      "stair",
+      "veneer stone",
+      "walkway"
+    ],
     "slug": "project-2",
     "featured": true,
     "description": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper.",
@@ -47,8 +54,8 @@
     ]
   },
   {
-    "title": "Malden",
-    "tags": ["retaining-wall", "addition"],
+    "title": "Malden, MA",
+    "tags": ["paver", "walkway", "excavation", "retaining wall", "patio"],
     "slug": "project-3",
     "featured": true,
     "description": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper.",
@@ -65,8 +72,16 @@
     ]
   },
   {
-    "title": "Malden",
-    "tags": ["retaining-wall", "addition"],
+    "title": "Malden, MA",
+    "tags": [
+      "porch",
+      "stair",
+      "walkway",
+      "driveway",
+      "landscape",
+      "irrigation",
+      "grass"
+    ],
     "slug": "project-4",
     "featured": true,
     "description": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper.",
@@ -91,8 +106,8 @@
     ]
   },
   {
-    "title": "Project Five",
-    "tags": ["retaining-wall", "addition"],
+    "title": "Malden, MA",
+    "tags": ["excavation", "driveway", "asphalt", "ground leveling"],
     "slug": "project-5",
     "featured": true,
     "description": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper.",
@@ -107,32 +122,10 @@
     ]
   },
   {
-    "title": "Project Six",
-    "tags": ["retaining-wall", "addition"],
-    "slug": "project-6",
-    "description": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper.",
-    "images": [
-      "/images/six/1.jpeg",
-      "/images/six/2.jpeg",
-      "/images/six/3.jpeg",
-      "/images/six/4.jpeg",
-      "/images/six/5.jpeg",
-      "/images/six/6.jpeg",
-      "/images/six/7.jpeg",
-      "/images/six/8.jpeg",
-      "/images/six/9.jpeg",
-      "/images/six/10.jpeg",
-      "/images/six/11.jpeg",
-      "/images/six/12.jpeg",
-      "/images/six/13.jpeg",
-      "/images/six/14.jpeg",
-      "/images/six/15.jpeg"
-    ]
-  },
-  {
-    "title": "Project Seven",
-    "tags": ["retaining-wall", "addition"],
+    "title": "Winchester, MA",
+    "tags": ["excavation", "pation", "walkway", "retaining wall", "firepit"],
     "slug": "project-7",
+    "featured": false,
     "description": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper.",
     "images": [
       "/images/seven/1.jpeg",
@@ -152,9 +145,10 @@
     ]
   },
   {
-    "title": "Project Eight",
-    "tags": ["retaining-wall", "addition"],
+    "title": "Canton, MA",
+    "tags": ["venner stone", "porch", "walkway"],
     "slug": "project-8",
+    "featured": false,
     "description": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper.",
     "images": [
       "/images/eight/1.jpeg",

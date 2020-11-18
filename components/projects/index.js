@@ -10,20 +10,18 @@ export function ProjectContent() {
       <Content contentPage>
         {projectData.map((project, key) => {
           return (
-            <>
-              <Box key={key} image={project.images[0]} contentPage>
-                <div className={"projectInfo"}>
-                  <h3>
-                    <Link href={`/projects/${project.slug}`}>
-                      <a>
-                        <FaLink /> {project.title}
-                      </a>
-                    </Link>
-                  </h3>
-                </div>
-                <Image src={`${project.images[0]}`} width={650} height={650} />
-              </Box>
-            </>
+            <Box key={key} image={project.images[0]} contentPage>
+              <div className={"projectInfo"}>
+                <h3>
+                  <Link href={`/projects/${project.slug}`}>
+                    <a>
+                      <FaLink /> {project.title}
+                    </a>
+                  </Link>
+                </h3>
+              </div>
+              <Image src={`${project.images[0]}`} width={650} height={650} />
+            </Box>
           );
         })}
       </Content>
