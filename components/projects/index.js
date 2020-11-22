@@ -41,32 +41,24 @@ export function Projects() {
             risus varius blandit sit amet non magna.
           </Description>
         </Box>
-
         {projectData.map((project, key) => {
-          return (
-            <>
-              {key <= 4 && project.featured && (
-                <Box key={key} image={project.images[0]} contentPage>
-                  <div className={"projectInfo"}>
-                    <h3>
-                      <Link href={`/projects/${project.slug}`}>
-                        <a>
-                          <FaLink /> {project.title}
-                        </a>
-                      </Link>
-                    </h3>
-                  </div>
-                  <Image
-                    src={`${project.images[0]}`}
-                    width={650}
-                    height={650}
-                  />
-                </Box>
-              )}
-            </>
-          );
+          if (key <= 4 && project.featured) {
+            return (
+              <Box key={key} image={project.images[0]} contentPage>
+                <div className={"projectInfo"}>
+                  <h3>
+                    <Link href={`/projects/${project.slug}`}>
+                      <a>
+                        <FaLink /> {project.title}
+                      </a>
+                    </Link>
+                  </h3>
+                </div>
+                <Image src={`${project.images[0]}`} width={650} height={650} />
+              </Box>
+            );
+          }
         })}
-
         {projectData.length > 4 && (
           <Box>
             <Link href="/projects">

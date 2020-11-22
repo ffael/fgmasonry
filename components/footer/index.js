@@ -17,7 +17,7 @@ export default function Footer() {
           <section className={"info-section"}>
             <h3>Information</h3>
             <address>
-              <p>111 Dalton Street, Lowell, Massachusetts, 01850</p>
+              <p>144 Dalton Street, Lowell, Massachusetts, 01850</p>
               <p>
                 <a href="mailto:fgmasonry@gmail.com">fgmasonry@gmail.com</a>
               </p>

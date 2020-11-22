@@ -122,6 +122,7 @@ export default function Estimate() {
                     </option>
                   );
                 })}
+                <option value="varios">Multiple Services (please describe)</option>
               </select>
             </fieldset>
             <fieldset>

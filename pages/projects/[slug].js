@@ -1,12 +1,14 @@
-import Layout from "../../layouts";
 import Head from "next/head";
+import Link from "next/link";
+import Image from "next/image";
+
+import styled from "styled-components";
+import AwesomeSlider from "react-awesome-slider";
+import withAutoplay from "react-awesome-slider/dist/autoplay";
+import Layout from "../../layouts";
+import { themeConfig } from "../../styles/theme";
 import { Context } from "../../context";
 import projectsData from "../../data/projects.json";
-import Carousel from "nuka-carousel";
-import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
-import styled from "styled-components";
-import Image from "next/image";
-import { themeConfig } from "../../styles/theme";
 
 export const Box = styled.div`
   border: 1px solid ${(props) => props.theme.colors.darkBeige};
@@ -50,8 +52,21 @@ export const Container = styled.section`
     font-size: 1rem;
     line-height: 30px;
     font-weight: 300;
-    margin-bottom: 80px;
+    margin: 80px 0;
     color: ${(props) => props.theme.colors.black};
+  }
+  a {
+    font-weight: bold;
+    color: ${(props) => props.theme.colors.orange};
+    border-bottom: 1px solid ${(props) => props.theme.colors.orange};
+    display: inline-block;
+    padding: 10px 0;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: ${(props) => props.theme.colors.black};
+      border-bottom: 1px solid ${(props) => props.theme.colors.black};
+    }
   }
   .tags {
     display: flex;
@@ -86,9 +101,11 @@ export async function getStaticPaths() {
     fallback: false,
   };
 }
+
 export async function getStaticProps({ params: { slug } }) {
   const projects = projectsData.filter((item) => item.slug === slug);
   const { title, description, images, tags } = projects[0];
+
   return {
     props: {
       title,
@@ -99,6 +116,7 @@ export async function getStaticProps({ params: { slug } }) {
   };
 }
 export default function ProjectPage({ title, description, images, tags }) {
+  const AutoPlaySlider = withAutoplay(AwesomeSlider);
   return (
     <Context.Provider value={{ title: title, image: images[0] }}>
       <Head>
@@ -106,35 +124,15 @@ export default function ProjectPage({ title, description, images, tags }) {
       </Head>
       <Layout>
         <Container className="grid section-xl">
+          <Link href="/projects">
+            <a>Back to Projects</a>
+          </Link>
           <p>{description}</p>
-          <Carousel
-            className={"carousel carousel-xl"}
-            slidesToShow={1}
-            autoplay={true}
-            wrapAround
-            transitionMode={"fade"}
-            initialSlideHeight={500}
-            initialSlideWidth={500}
-            dragging={false}
-            pauseOnHover
-            renderBottomCenterControls={null}
-            renderCenterLeftControls={({ previousSlide }) => (
-              <button className={"controlButton"} onClick={previousSlide}>
-                <FaAngleLeft size={30} fill={themeConfig.colors.black} />
-              </button>
-            )}
-            renderCenterRightControls={({ nextSlide }) => (
-              <button className={"controlButton"} onClick={nextSlide}>
-                <FaAngleRight size={30} fill={themeConfig.colors.black} />
-              </button>
-            )}
-          >
+          <AutoPlaySlider bullets={false} infinite play interval={2000}>
             {images.map((image, key) => {
-              return (
-                <Image key={key} layout="responsive" unsized src={image} />
-              );
+              return <div key={key} data-src={image}></div>;
             })}
-          </Carousel>
+          </AutoPlaySlider>
           <h3>Services Performed:</h3>
           <ul className="tags">
             {tags.map((tag, key) => {
