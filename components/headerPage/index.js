@@ -25,7 +25,7 @@ export default function Header() {
           handleVisible={setIsMenuOpen}
         />
       )}
-      <Container image={ctx.image}>
+      <Container>
         <Content>
           <Logo>
             <Link href="/">

@@ -5,9 +5,7 @@ import { Context } from "../context";
 
 export default function ContactPage() {
   return (
-    <Context.Provider
-      value={{ title: "Testimonials", image: "/images/bg-page.jpeg" }}
-    >
+    <Context.Provider value={{ title: "Testimonials", image: "" }}>
       <Head>
         <title>FG Masonry - Testimonials</title>
       </Head>

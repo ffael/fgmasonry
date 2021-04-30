@@ -1,12 +1,12 @@
 import Layout from "../layouts";
-import Head from 'next/head'
-import About from '../components/about'
-import { Context } from '../context'
+import Head from "next/head";
+import About from "../components/about";
+import { Context } from "../context";
 
 export default function AboutPage() {
   return (
-    <Context.Provider value={{title:"About Us", image: '/images/3.jpeg'}}>
-     <Head>
+    <Context.Provider value={{ title: "About Us", image: "" }}>
+      <Head>
         <title>FG Masonry - About</title>
       </Head>
       <Layout>

@@ -4,13 +4,14 @@ export const Container = styled.header`
   display: flex;
   align-items: top;
   flex-direction: column;
-  background: ${props => props.image ? `url(${props.image})` : `url('/images/bg-page.jpeg')`};
+  background: ${(props) =>
+    props.image ? `url(${props.image})` : `url('/images/bg.jpeg')`};
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: cover;
   position: relative;
   height: 60vh;
-  border-bottom: 10px solid ${props=> props.theme.colors.orange};
+  border-bottom: 10px solid ${(props) => props.theme.colors.orange};
 
   @media (min-width: 700px) {
     height: 50vh;
@@ -89,7 +90,7 @@ export const Filter = styled.div`
   z-index: 1;
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   @media (min-width: 700px) {
   }
 `;
