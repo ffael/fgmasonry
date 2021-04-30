@@ -24,12 +24,12 @@ export const MainNav = styled.nav`
 `;
 
 export const MobileNav = styled.nav`
-  position: absolute;
+  position: fixed;
   display: flex;
   flex-direction: column;
   z-index: 10;
-  width: 100vw;
-  height: 100vh;
+  width: 100vw !important;
+  height: 100vh !important;
   background: ${(props) => props.theme.colors.lightBeige};
   > button {
     border: 0;
