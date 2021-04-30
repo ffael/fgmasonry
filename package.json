@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "axios": "^0.21.0",
+    "bootstrap": "^4.6.0",
     "cors": "^2.8.5",
     "framer-motion": "^2.9.4",
     "mailgun-js": "^0.22.0",

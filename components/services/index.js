@@ -10,7 +10,9 @@ import {
   ServiceList,
   RequestButton,
 } from "./styles";
+
 import Carousel from "nuka-carousel";
+
 import {
   FaAngleRight,
   FaAngleLeft,
@@ -77,9 +79,9 @@ export function Services() {
           <header>
             <Title>Services</Title>
             <Description>
-              Donec id elit non mi porta gravida at eget metus. Cras justo odio,
-              dapibus ac facilisis in, egestas eget quam. Maecenas sed diam eget
-              risus varius blandit sit amet non magna.
+              FG Masonry is a complete hardscape company. We design and build
+              stone patios, stone walls, as well as other quality structures to
+              enhance your property.
             </Description>
           </header>
           <List>

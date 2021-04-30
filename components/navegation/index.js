@@ -11,34 +11,53 @@ export function Navegation() {
       <ul>
         <li>
           <Link href="/">
-            <a className={`${router.route === "/" ? 'link-active' : ''}`}>Home</a>
+            <a className={`${router.route === "/" ? "link-active" : ""}`}>
+              Home
+            </a>
           </Link>
         </li>
         <li>
           <Link href={"/about"}>
-            <a className={`${router.route === "/about" ? 'link-active' : ''}`}>
+            <a className={`${router.route === "/about" ? "link-active" : ""}`}>
               About Us
             </a>
           </Link>
         </li>
         <li>
           <Link href={"/projects"}>
-            <a className={`${router.route === "/projects" ? 'link-active' : ''}`}>
+            <a
+              className={`${router.route === "/projects" ? "link-active" : ""}`}
+            >
               Projects
             </a>
           </Link>
         </li>
         <li>
           <Link href={"/services"}>
-            <a className={`${router.route === "/services" ? 'link-active' : ''}`}>
+            <a
+              className={`${router.route === "/services" ? "link-active" : ""}`}
+            >
               Services
             </a>
           </Link>
         </li>
         <li>
           <Link href={"/contact"}>
-            <a className={`${router.route === "/contact" ? 'link-active' : ''}`}>
+            <a
+              className={`${router.route === "/contact" ? "link-active" : ""}`}
+            >
               Contact
+            </a>
+          </Link>
+        </li>
+        <li>
+          <Link href={"/testimonials"}>
+            <a
+              className={`${
+                router.route === "/testimonials" ? "link-active" : ""
+              }`}
+            >
+              Testimonials
             </a>
           </Link>
         </li>
@@ -77,6 +96,11 @@ export function MobileNavegation({ handleVisible }) {
         <li>
           <Link href={"/contact"}>
             <a>Contact</a>
+          </Link>
+        </li>
+        <li>
+          <Link href={"/testimonials"}>
+            <a>Testimonials</a>
           </Link>
         </li>
         <li>

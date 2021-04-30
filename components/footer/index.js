@@ -33,7 +33,7 @@ export default function Footer() {
                 {serviceData.map((service, key) => {
                   return (
                     <li key={key}>
-                      <a href={'/services'}>{service.title}</a>
+                      <a href={"/services"}>{service.title}</a>
                     </li>
                   );
                 })}
@@ -72,7 +72,7 @@ export default function Footer() {
           </section>
         </Content>
       </Container>
-      <Copyright> Copyright ® 2020 - FG Masonry</Copyright>
+      <Copyright> Copyright ® 2021 - FG Masonry</Copyright>
     </footer>
   );
 }

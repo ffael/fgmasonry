@@ -24,7 +24,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   ::selection{
-    background: ${props => props.theme.colors.darkBeige};
+    background: ${(props) => props.theme.colors.darkBeige};
   }
 
   html,
@@ -43,7 +43,7 @@ export const GlobalStyles = createGlobalStyle`
 
   a {
     color: inherit;
-    text-decoration: none;
+    text-decoration: none !important;
   }
 
   * {

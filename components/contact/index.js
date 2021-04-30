@@ -28,7 +28,7 @@ export default function Contact() {
   return (
     <Container className="grid section-xl">
       <Content>
-        <article>
+        {/* <article>
           <h3>
             Improving quality of life with an integrated unified approach.
           </h3>
@@ -46,7 +46,7 @@ export default function Contact() {
             laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh
             ultricies vehicula ut id elit.
           </p>
-        </article>
+        </article> */}
         <article>
           <form method={"POST"} onSubmit={handleSubmit}>
             <fieldset>
@@ -64,7 +64,7 @@ export default function Contact() {
                 type="email"
                 id="email"
                 required
-                pattern={"[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+"}
+                pattern={"[^@ \t\r\n]+@[^@ \t\r\n]+.[^@ \t\r\n]+"}
                 onBlur={(e) => setEmail(e.target.value)}
               />
             </fieldset>

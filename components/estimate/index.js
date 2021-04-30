@@ -20,11 +20,11 @@ export default function Estimate() {
   });
   const [message, setMessage] = useState("");
 
-  useEffect(()=>{
+  useEffect(() => {
     if (router.query.type) {
-      setType(router.query.type) 
+      setType(router.query.type);
     }
-  }, [router.query])
+  }, [router.query]);
 
   async function handleSubmit(e) {
     await fetch("/api/estimate", {
@@ -49,7 +49,7 @@ export default function Estimate() {
       <Content>
         <article>
           <h3>Get a free estimate</h3>
-          <p>
+          {/* <p>
             Sed posuere consectetur est at lobortis. Cum sociis natoque
             penatibus et magnis dis parturient montes, nascetur ridiculus mus.
             Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue
@@ -62,7 +62,7 @@ export default function Estimate() {
             Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue
             laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh
             ultricies vehicula ut id elit.
-          </p>
+          </p> */}
         </article>
         <article>
           <form method="POST" onSubmit={(e) => handleSubmit(e)}>
@@ -122,14 +122,16 @@ export default function Estimate() {
                     </option>
                   );
                 })}
-                <option value="varios">Multiple Services (please describe)</option>
+                <option value="varios">
+                  Multiple Services (please describe)
+                </option>
               </select>
             </fieldset>
             <fieldset>
               <label htmlFor="area">Project Area (in sqft):</label>
               <input
                 type="number"
-                min='1'
+                min="1"
                 id="area"
                 onBlur={(e) => setArea(e.target.value)}
               />

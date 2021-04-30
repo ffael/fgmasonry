@@ -13,10 +13,7 @@ import {
   MenuButton,
 } from "./styles";
 
-export default function Header({
-  title = "Focused on Quality",
-  slogan = "Morbi leo risus, porta ac consectetur ac, vestibulum at eros.",
-}) {
+export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -43,8 +40,11 @@ export default function Header({
           <Button href="/estimate">Get a Free Estimate</Button>
         </Content>
         <HeroContainer>
-          <h1>{title}</h1>
-          <p>{slogan}</p>
+          <h1>Focused on Quality</h1>
+          <p>
+            Maximize outdoor space with beautifully constructed custom-built
+            stone patios, walkways, driveways, brick, cobblestone, and pavers.
+          </p>
         </HeroContainer>
         <Filter />
       </Container>

@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-import * as gtag from '../libs/gtag';
-import 'react-toastify/dist/ReactToastify.css';
-import 'react-awesome-slider/dist/styles.css';
+import * as gtag from "../libs/gtag";
+import "react-toastify/dist/ReactToastify.css";
+import "react-awesome-slider/dist/styles.css";
 
 const App = ({ Component, pageProps }) => {
   const router = useRouter();

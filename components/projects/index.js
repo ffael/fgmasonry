@@ -36,10 +36,11 @@ export function Projects() {
         <Box>
           <Title>Recent Projects</Title>
           <Description>
-            Donec id elit non mi porta gravida at eget metus. Cras justo odio,
-            dapibus ac facilisis in, egestas eget quam. Maecenas sed diam eget
-            risus varius blandit sit amet non magna.
+            We are proud to have collected a variety of satisfied customers.{" "}
+            <br />
+            These are some of our most recent projects.
           </Description>
+          <Description></Description>
         </Box>
         {projectData.map((project, key) => {
           if (key <= 4 && project.featured) {

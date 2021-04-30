@@ -6,22 +6,15 @@ export default function About() {
     <Container className="grid section-xl">
       <Content>
         <article>
-          <h3>
-            Improving quality of life with an integrated unified approach.
-          </h3>
+          <h3>Customer satisfaction is our core!</h3>
           <p>
-            Sed posuere consectetur est at lobortis. Cum sociis natoque
-            penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-            Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue
-            laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh
-            ultricies vehicula ut id elit.
-          </p>
-          <p>
-            Sed posuere consectetur est at lobortis. Cum sociis natoque
-            penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-            Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue
-            laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh
-            ultricies vehicula ut id elit.
+            FG Masonry has been serving the New England community for over 5
+            years. The reason for our longevity is simple – our unparalleled
+            commitment to providing the finest service, value, and quality in
+            the industry. Whether you require quality masonry services,
+            cobblestone specialties or asphalt paving, FG Masonry has the
+            resources and expertise to get the job done right … the first time,
+            every time.
           </p>
         </article>
         <picture>
@@ -30,7 +23,7 @@ export default function About() {
             src={"/images/4.jpeg"}
             width={400}
             height={400}
-            layout='intrinsic'
+            layout="intrinsic"
           />
         </picture>
       </Content>
