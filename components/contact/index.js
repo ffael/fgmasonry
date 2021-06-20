@@ -1,29 +1,7 @@
 import { useState } from "react";
 import { Container, Content, Button } from "./styles";
 
-import { useFormik } from "formik";
-import * as Yup from "yup";
-
 export default function Contact() {
-  const initialValues = {
-    name: "Rafael",
-    age: 29,
-  };
-
-  const validationSchema = Yup.object().shape({
-    name: Yup.string(),
-    age: Yup.string(),
-  });
-
-  const formik = useFormik({
-    initialValues,
-    validationSchema,
-    onSubmit: ({ name, age }, { resetForm }) => {
-      alert(`${name}, ${age} years old.`);
-      resetForm();
-    },
-  });
-
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -141,23 +119,6 @@ export default function Contact() {
           </form>
         </article>
       </Content>
-      <form onSubmit={formik.handleSubmit}>
-        <input
-          type="text"
-          name="name"
-          id="name"
-          placeholder="Type your name"
-          {...formik.getFieldProps("name")}
-        />
-        <input
-          type="text"
-          name="age"
-          id="age"
-          placeholder="Type your age"
-          {...formik.getFieldProps("age")}
-        />
-        <button type="submit">Send</button>
-      </form>
     </Container>
   );
 }
